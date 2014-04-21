@@ -21,45 +21,61 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
+html, button, input, select, textarea {
   font-family: 'Open Sans', sans-serif;
 }
 
-.button-secondary {
-  color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.button-secondary {
-  background: rgba(108, 67, 223, 0.55);
-}
-
-.button-xlarge {
-  font-size: 150%;
-}
-
-// #board {
-//   width: 600px;
-//   margin-left: auto;
-//   margin-right: auto;
+// .button-secondary {
+//   color: white;
+//   border-radius: 4px;
+//   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+// }
+//
+// .button-secondary {
+//   background: rgba(108, 67, 223, 0.55);
+// }
+//
+// .button-xlarge {
+//   font-size: 150%;
 // }
 
-#controls {
-  padding: 10px;
+h1{
+  font-size: 72px;
+  text-align: center;
+}
+
+button, #clock {
+  font-size: 30px;
+  padding: 10px 15px;
+  border: 5px solid black;
+  border-radius: 5px;
 }
 
 #clock {
+  font-weight: bold;
+  color: #e68114;
+  background-color: #2a9f1e;
   margin-left: 10px;
   display: inline-block;
 }
 
+
+#board {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 10px;
+}
+
+#controls {
+  text-align: center;
+  padding: 10px;
+}
+
 #board td {
-  border: 1px dashed #24221c;
-  -webkit-perspective: 500;
-  width: 125px;
-  height: 125px;
+  -webkit-perspective: 1000;
+  width: 150px;
+  height: 150px;
+
 
   .flipper {
     position: relative;
@@ -69,14 +85,18 @@ html, button, input, select, textarea,
     height: 100%;
 
     .front, .back {
+      border: 5px solid black;
+      border-radius: 7px;
       position: absolute;
       -webkit-backface-visibility: hidden;
       width: 100%;
       height: 100%;
+      text-align: center;
     }
 
     .front {
       z-index: 2;
+      background-color: #e68114;
     }
 
     .back {
@@ -84,6 +104,10 @@ html, button, input, select, textarea,
       -webkit-transform: rotateY(180deg);
     }
   }
+}
+
+img {
+  margin-top: 30px;
 }
 
 .rotate {

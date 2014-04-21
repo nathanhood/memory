@@ -13,13 +13,13 @@
   }
 
   function reveal(){
-    debugger;
+    // debugger;
     var row = $(this).parent().index();
     var col = $(this).index();
     var pos = (row * 4) + col;
     var img = numbers[pos];
 
-    $(this).find('.back').css('background-image', 'url("./media/' + img + '.png")';
+    $(this).find('.back').css('background-image', 'url("./media/' + img + '.png")');
     //calling the background-image css property and defining url based on what td is clicked.
     $(this).find('.flipper').addClass('rotate');
     //add class 'rotate' to flipper div inside of specific td
@@ -41,7 +41,7 @@
         $matches.addClass('match');
         $matches.off('click');//turns off click event handler for these tds
       }else{
-        setTimeout(function()){//calling anonymous function
+        setTimeout(function(){//calling anonymous function
           $matches.find('.flipper').removeClass('rotate');
           setTimeout(function(){
             $matches.find('.back').css('background-image', '');
@@ -54,6 +54,7 @@
   }
 
   function start(){
+    // debugger;
     create();
     randomize();
 
@@ -64,11 +65,11 @@
   }
 
   function create(){ //build 20 index array out of 10 images
-    debugger;
+    // debugger;
     numbers = [];
 
     for(var i = 0; i < 2; i++){
-      for(var j = 0; j < 10; j++){
+      for(var j = 0; j < 9; j++){
         numbers.push(j);
       }
     }
@@ -105,7 +106,7 @@
   function results(){
     var matches = $('.match').length;
 
-    if(matches === 20){
+    if(matches === 18){
       alert('Winner');
     }else{
       alert('Try Again');
